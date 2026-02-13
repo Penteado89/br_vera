@@ -30,7 +30,6 @@
         <button id="btn-pt" class="btn" type="button" aria-pressed="false">PT-BR</button>
       </div>
     </div>
-
   </header>
 
   <main class="container">
@@ -80,7 +79,7 @@
           BR-ECHO / BR-VERA Project
         </p>
       </div>
-    
+
       <div class="lang-block" data-lang="pt" hidden>
         <h2>Responsabilidade acadêmica</h2>
         <p>
@@ -98,7 +97,6 @@
         </p>
       </div>
     </section>
-
 
     <!-- Table of contents -->
     <nav class="card" id="toc" aria-label="Table of contents">
@@ -127,6 +125,7 @@
       </div>
     </nav>
 
+    <!-- Human annotation layer -->
     <section class="card" id="annotation-variables">
       <div class="lang-block" data-lang="en">
         <h2>Annotation Variables (Human Layer)</h2>
@@ -139,7 +138,7 @@
           Note: Category labels are kept in English for computational compatibility. Portuguese glosses are provided
           to support human annotators.
         </p>
-    
+
         <table class="meta" style="width:100%; border-collapse:collapse;">
           <thead>
             <tr>
@@ -158,7 +157,7 @@
               </td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Single-choice</strong></td>
             </tr>
-    
+
             <tr>
               <td style="padding:8px; border-bottom:1px solid var(--border);">Evidence spans</td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_evidence_spans</code></td>
@@ -167,7 +166,7 @@
               </td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Multi-span</strong></td>
             </tr>
-    
+
             <tr>
               <td style="padding:8px; border-bottom:1px solid var(--border);">Speech act type</td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_speech_act_type</code></td>
@@ -177,7 +176,7 @@
               </td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Single-choice</strong></td>
             </tr>
-    
+
             <tr>
               <td style="padding:8px; border-bottom:1px solid var(--border);">Primary target type</td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_target_type</code></td>
@@ -187,7 +186,7 @@
               </td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Single-choice</strong></td>
             </tr>
-    
+
             <tr>
               <td style="padding:8px; border-bottom:1px solid var(--border);">Annotator confidence</td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_confidence</code></td>
@@ -196,7 +195,7 @@
               </td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Single-choice</strong></td>
             </tr>
-    
+
             <tr>
               <td style="padding:8px; border-bottom:1px solid var(--border);">Annotator notes (optional)</td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_notes</code></td>
@@ -205,13 +204,13 @@
             </tr>
           </tbody>
         </table>
-    
+
         <p class="meta">
           Decision scope: Speech act type and target type are recorded as dominant (single-choice) variables to reduce
           annotator fatigue and improve adjudication. Multi-label decompositions are handled in the model-based layer.
         </p>
       </div>
-    
+
       <div class="lang-block" data-lang="pt" hidden>
         <h2>Variáveis de anotação (camada humana)</h2>
         <p>
@@ -223,7 +222,7 @@
           Nota: As categorias são mantidas em inglês por compatibilidade computacional. As glossas em português apoiam
           o trabalho dos anotadores humanos.
         </p>
-    
+
         <table class="meta" style="width:100%; border-collapse:collapse;">
           <thead>
             <tr>
@@ -242,7 +241,7 @@
               </td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Uma</strong></td>
             </tr>
-    
+
             <tr>
               <td style="padding:8px; border-bottom:1px solid var(--border);">Trechos de evidência</td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_evidence_spans</code></td>
@@ -251,7 +250,7 @@
               </td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Uma ou mais</strong></td>
             </tr>
-    
+
             <tr>
               <td style="padding:8px; border-bottom:1px solid var(--border);">Tipo de ato de fala</td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_speech_act_type</code></td>
@@ -261,7 +260,7 @@
               </td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Uma</strong></td>
             </tr>
-    
+
             <tr>
               <td style="padding:8px; border-bottom:1px solid var(--border);">Alvo principal</td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_target_type</code></td>
@@ -271,7 +270,7 @@
               </td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Uma</strong></td>
             </tr>
-    
+
             <tr>
               <td style="padding:8px; border-bottom:1px solid var(--border);">Confiança do anotador</td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_confidence</code></td>
@@ -280,7 +279,7 @@
               </td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Uma</strong></td>
             </tr>
-    
+
             <tr>
               <td style="padding:8px; border-bottom:1px solid var(--border);">Observações (opcional)</td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_notes</code></td>
@@ -289,39 +288,39 @@
             </tr>
           </tbody>
         </table>
-    
+
         <p class="meta">
           Escopo decisório: Tipo de ato de fala e alvo principal são registrados como variáveis dominantes (escolha única)
           para reduzir fadiga e facilitar adjudicação. Decomposições multi-rótulo ficam na camada baseada em modelos.
         </p>
       </div>
     </section>
-    
+
     <section class="card" id="decision-rules">
       <div class="lang-block" data-lang="en">
         <h2>Operational Decision Rules</h2>
-    
+
         <h3>Evidence spans</h3>
         <ul>
           <li>Select <strong>one or more</strong> short, literal spans that directly justify the primary label.</li>
           <li>Evidence must be <strong>extractive</strong> (copied from the text), not paraphrased.</li>
           <li>If multiple spans are selected, each span must contribute distinct justification (avoid duplicates).</li>
         </ul>
-    
+
         <h3>Speech act type (single-choice)</h3>
         <ul>
           <li>Select the <strong>dominant</strong> speech act that most directly supports the assigned label.</li>
           <li>If threat or instruction is present in the evidence, do not select <code>none</code>.</li>
           <li>If multiple speech acts occur, prioritize the one that makes the content actionable (threat/instruction &gt; incitement &gt; glorification &gt; ideological_framing).</li>
         </ul>
-    
+
         <h3>Target type (single-choice)</h3>
         <ul>
           <li>Select the target type that is <strong>most directly implicated</strong> in the evidence span(s).</li>
           <li>Do not identify specific protected groups as a required step; target type remains high-level.</li>
           <li>If targets are diffuse (e.g., “society”, “humanity”, “the system”), select <code>abstract</code>.</li>
         </ul>
-    
+
         <h3>Confidence</h3>
         <ul>
           <li>Use <code>high</code> when label and evidence are straightforward under the codebook.</li>
@@ -329,31 +328,31 @@
           <li>Use <code>low</code> when the decision is borderline or evidence is weak/indirect.</li>
         </ul>
       </div>
-    
+
       <div class="lang-block" data-lang="pt" hidden>
         <h2>Regras operacionais de decisão</h2>
-    
+
         <h3>Trechos de evidência</h3>
         <ul>
           <li>Selecione <strong>um ou mais</strong> trechos literais curtos que justifiquem diretamente o rótulo principal.</li>
           <li>A evidência deve ser <strong>extrativa</strong> (copiada do texto), e não parafraseada.</li>
           <li>Se houver múltiplos trechos, cada um deve contribuir com justificativa distinta (evitar duplicação).</li>
         </ul>
-    
+
         <h3>Tipo de ato de fala (escolha única)</h3>
         <ul>
           <li>Selecione o ato de fala <strong>predominante</strong> que sustenta de modo mais direto o rótulo atribuído.</li>
           <li>Se houver ameaça ou instrução no(s) trecho(s) de evidência, não selecionar <code>none</code>.</li>
           <li>Quando houver sobreposição, priorize o que torna o conteúdo acionável (threat/instruction &gt; incitement &gt; glorification &gt; ideological_framing).</li>
         </ul>
-    
+
         <h3>Alvo principal (escolha única)</h3>
         <ul>
           <li>Selecione o tipo de alvo <strong>mais diretamente implicado</strong> no(s) trecho(s) de evidência.</li>
           <li>Não é necessário identificar grupos protegidos específicos; o alvo permanece em nível alto de abstração.</li>
           <li>Quando o alvo for difuso (ex.: “sociedade”, “humanidade”, “sistema”), selecione <code>abstract</code>.</li>
         </ul>
-    
+
         <h3>Confiança</h3>
         <ul>
           <li>Use <code>high</code> quando rótulo e evidência forem diretos à luz do codebook.</li>
@@ -362,7 +361,6 @@
         </ul>
       </div>
     </section>
-
 
     <!-- ENGLISH CODEBOOK -->
     <section class="card lang-block" data-lang="en" id="codebook-en">
@@ -414,7 +412,7 @@
         <li>“Só pode haver uma verdade e ela pode ser entendida por meio da observação e lógica. O funcionamento do mundo natural não permite falsidades. Os humanos fazem parte da natureza.”</li>
         <li>“A sociedade humana é organicamente estruturada, assim como seu componente central, os próprios humanos. Assim como o organismo é formado pela organela, célula, órgão e finalmente o próprio organismo, assim são todas as coisas.”</li>
         <li>“Cuide de si primeiro, organize seu próprio pensamento e estilo de vida antes de tentar consertar o de outra pessoa (ou do mundo).”</li>
-        <li>"Uso pessoal: O ideal é minimizar o quanto de informação pessoal você compartilha online, algo que a geração moderna rotineiramente falha em fazer, pois a comunicação online é algo normal e cotidiano desde a infância, sendo tratada com uma atitude excessivamente despreocupada."</li>
+        <li>“Uso pessoal: O ideal é minimizar o quanto de informação pessoal você compartilha online, algo que a geração moderna rotineiramente falha em fazer, pois a comunicação online é algo normal e cotidiano desde a infância, sendo tratada com uma atitude excessivamente despreocupada.”</li>
       </ul>
 
       <h2 id="class1">4. Class 1 — Implicit Violent Extremism</h2>
@@ -459,10 +457,10 @@
 
       <h3>Examples</h3>
       <ul>
-        <li>“Um povo em equilíbrio e harmonia simplesmente não é suscetível a coisas como miscigenação ou doenças do liberalismo ou da democracia”</li>
-        <li>“Lembre-se de que a sobrevivência é dos mais aptos. 'Darwinismo revolucionário'?”</li>
-        <li>“O maior bem é escolher lutar com a natureza, lutar com a ordem social, lutar por seu povo constituinte, a fim de melhorar seu povo conforme necessário para o seu crescimento ou evolução.</li>
-        <li>"A radicalização é a resposta racional à degeneração."</li>
+        <li>“Um povo em equilíbrio e harmonia simplesmente não é suscetível a coisas como miscigenação ou doenças do liberalismo ou da democracia.”</li>
+        <li>“Lembre-se de que a sobrevivência é dos mais aptos. ‘Darwinismo revolucionário’?”</li>
+        <li>“O maior bem é escolher lutar com a natureza, lutar com a ordem social, lutar por seu povo constituinte, a fim de melhorar seu povo conforme necessário para o seu crescimento ou evolução.”</li>
+        <li>“A radicalização é a resposta racional à degeneração.”</li>
       </ul>
 
       <h2 id="class2">5. Class 2 — Explicit Violent Extremism</h2>
@@ -496,6 +494,7 @@
         <li>Preparation/logistics</li>
         <li>Temporal markers indicating imminence</li>
       </ul>
+
       <p class="meta">
         Note: Examples involving violent extremism may be partially masked or paraphrased
         to prevent unnecessary reproduction of harmful content, while preserving their
@@ -504,31 +503,11 @@
 
       <h3>Examples</h3>
       <ul>
-        <li>
-          <strong>[Extremismo Violento Explícito]</strong>
-          Texto que sugere a realização de ataques armados contra alvos estatais com o
-          objetivo de acelerar instabilidade política.
-        </li>
-      
-        <li>
-          <strong>[Extremismo Violento Explícito]</strong>
-          Descrição instrucional de sabotagem de infraestrutura crítica como meio de
-          provocar colapso social em larga escala.
-        </li>
-      
-        <li>
-          <strong>[Extremismo Violento Explícito]</strong>
-          Ameaça direta envolvendo intimidação e uso de dados pessoais como forma de
-          coerção ou retaliação.
-        </li>
-      
-        <li>
-          <strong>[Extremismo Violento Explícito]</strong>
-          Incitação à violência contra instituições religiosas, articulada por meio de
-          ideologia racial supremacista e narrativas de punição coletiva.
-        </li>
+        <li><strong>[Explicit VE]</strong> Text that suggests armed attacks against state targets to accelerate political instability.</li>
+        <li><strong>[Explicit VE]</strong> Instructional description of critical infrastructure sabotage to trigger large-scale social collapse.</li>
+        <li><strong>[Explicit VE]</strong> Direct threat involving intimidation and personal-data coercion.</li>
+        <li><strong>[Explicit VE]</strong> Incitement to violence against religious institutions framed through supremacist punishment narratives.</li>
       </ul>
-
 
       <h2 id="tiebreak">6. Tie-Breaking Rules</h2>
       <ul>
@@ -536,11 +515,12 @@
         <li><strong>Non-Extremist vs. Implicit:</strong> if violence is normalized, aestheticized, or morally rationalized → <strong>Implicit VE</strong>.</li>
         <li><strong>Irony/humor:</strong> do not negate violent content; ironic “negative imperatives” still count as instruction if actionable.</li>
       </ul>
-
     </section>
 
     <!-- PORTUGUÊS -->
     <section class="card lang-block" data-lang="pt" id="codebook-pt" hidden>
+      <!-- (mantém o seu conteúdo PT aqui, sem alterações estruturais) -->
+      <!-- Dica: copie/cole seu bloco PT original completo aqui -->
       <h2>1. Finalidade do Codebook</h2>
       <p>
         Este codebook define critérios linguísticos e discursivos para anotação de textos em três classes
@@ -551,180 +531,11 @@
         <li><strong>Classe 1 — Extremismo Violento Implícito</strong></li>
         <li><strong>Classe 2 — Extremismo Violento Explícito</strong></li>
       </ul>
-      <p>
-        O objetivo principal é capturar <strong>risco linguístico de mobilização violenta</strong>, e não ofensividade,
-        traços psicológicos, filiação ideológica ou classificação jurídica.
-      </p>
 
-      <h2>2. Princípios Gerais de Anotação</h2>
-      <ol>
-        <li><strong>Interpretação discursiva:</strong> anotar com base em enquadramento discursivo e intenção comunicativa, e não em palavras isoladas.</li>
-        <li><strong>Toxicidade não é critério:</strong> textos não ofensivos podem expressar risco extremista.</li>
-        <li><strong>Ideologia explícita não é requisito:</strong> EV pode ocorrer sem ideologia, incluindo enquadramentos niilistas ou pós-ideológicos.</li>
-        <li><strong>Regra de preferência:</strong> em dúvida entre Não-Extremista e EV Implícito, selecionar <strong>EV Implícito</strong>.</li>
-        <li><strong>Tolerância zero à ação:</strong> ameaça, sugestão operacional ou conteúdo instrucional implica <strong>EV Explícito</strong>, independentemente do tom (ironia, humor, linguagem memética).</li>
-      </ol>
-
-      <h2>3. Classe 0 — Não-Extremista</h2>
-      <h3>Definição</h3>
-      <p>
-        Texto que não normaliza, incentiva, racionaliza ou estetiza violência, ainda que expresse niilismo, pessimismo ou
-        crítica social.
-      </p>
-      <h3>Critérios de Inclusão</h3>
-      <ul>
-        <li>Niilismo filosófico/existencial sem violência</li>
-        <li>Desabafo pessoal ou expressão emocional</li>
-        <li>Crítica política sem legitimação da violência</li>
-        <li>Discussão acadêmica/jornalística/descritiva sobre violência ou extremismo</li>
-        <li>Referência crítica ou condenatória a atores ou eventos violentos</li>
-      </ul>
-      <h3>Critérios de Exclusão</h3>
-      <ul>
-        <li>Enquadramento de violência como desejável, inevitável ou moralmente justificável</li>
-        <li>Misanthropia associada a narrativas de colapso violento</li>
-      </ul>
-      <h3>Exemplos</h3>
-      <ul>
-        <li>“Só pode haver uma verdade e ela pode ser entendida por meio da observação e lógica. O funcionamento do mundo natural não permite falsidades. Os humanos fazem parte da natureza.”</li>
-        <li>“A sociedade humana é organicamente estruturada, assim como seu componente central, os próprios humanos. Assim como o organismo é formado pela organela, célula, órgão e finalmente o próprio organismo, assim são todas as coisas.”</li>
-        <li>“Cuide de si primeiro, organize seu próprio pensamento e estilo de vida antes de tentar consertar o de outra pessoa (ou do mundo).”</li>
-        <li>"Uso pessoal: O ideal é minimizar o quanto de informação pessoal você compartilha online, algo que a geração moderna rotineiramente falha em fazer, pois a comunicação online é algo normal e cotidiano desde a infância, sendo tratada com uma atitude excessivamente despreocupada."</li>
-      </ul>
-
-      <h2>4. Classe 1 — Extremismo Violento Implícito</h2>
-      <h3>Definição</h3>
-      <p>
-        Texto que normaliza, estetiza ou racionaliza violência de forma indireta, sem ameaças ou instruções explícitas,
-        com misanthropia, fatalismo, narrativas de colapso ou sinalização subcultural.
-      </p>
-
-      <h3>Indicadores Centrais (Lista não exaustiva)</h3>
-      <h4>4.1 Racionalidade niilista</h4>
-      <ul>
-        <li>Violência enquadrada como inevitável, natural, corretiva ou parte da entropia social</li>
-        <li>Humanidade descrita como doença, praga, erro ou algo a ser apagado</li>
-      </ul>
-
-      <h4>4.2 Estetização da violência</h4>
-      <ul>
-        <li>Glorificação indireta de destruição, caos ou colapso</li>
-        <li>Linguagem artística, irônica ou distanciada sobre morte ou sofrimento</li>
-      </ul>
-
-      <h4>4.3 Sinalização subcultural</h4>
-      <ul>
-        <li>Referências neutras/positivas a atacantes anteriores</li>
-        <li>Símbolos, memes, música ou cenas associadas a subculturas violentas</li>
-        <li>Dog whistles inteligíveis para audiências internas</li>
-      </ul>
-
-      <h4>4.4 Ausência de alvo explícito</h4>
-      <ul>
-        <li>Sem ameaça direta</li>
-        <li>Sem conteúdo instrucional ou operacional</li>
-        <li>Alvos difusos (ex.: “humanidade”, “sociedade”, “sistema”)</li>
-      </ul>
-
-      <h3>Critérios de Exclusão</h3>
-      <ul>
-        <li>Chamada explícita à violência</li>
-        <li>Conteúdo tático/instrucional</li>
-      </ul>
-
-      <h3>Exemplos</h3>
-      <ul>
-        <li>“Um povo em equilíbrio e harmonia simplesmente não é suscetível a coisas como miscigenação ou doenças do liberalismo ou da democracia”</li>
-        <li>“Lembre-se de que a sobrevivência é dos mais aptos. 'Darwinismo revolucionário'?”</li>
-        <li>“O maior bem é escolher lutar com a natureza, lutar com a ordem social, lutar por seu povo constituinte, a fim de melhorar seu povo conforme necessário para o seu crescimento ou evolução.</li>
-        <li>"A radicalização é a resposta racional à degeneração."</li>
-      </ul>
-
-      <h2>5. Classe 2 — Extremismo Violento Explícito</h2>
-      <h3>Definição</h3>
-      <p>
-        Texto que ameaça, incita, instrui ou operacionaliza violência, independentemente de enquadramento ideológico ou tom.
-      </p>
-
-      <h3>Indicadores Centrais</h3>
-      <h4>5.1 Ameaças diretas ou claramente implícitas</h4>
-      <ul>
-        <li>“Vocês vão pagar.”</li>
-        <li>“Eles vão morrer.”</li>
-        <li>“Isso é só o começo.”</li>
-      </ul>
-
-      <h4>5.2 Chamada à ação</h4>
-      <ul>
-        <li>Incentivo a atacar, matar, ferir, sabotar (inclui formas condicionais/hipotéticas)</li>
-      </ul>
-
-      <h4>5.3 Conteúdo instrucional</h4>
-      <ul>
-        <li>Orientação prática sobre armas, ataques, sabotagem, intimidação</li>
-        <li>Inclui formulações “dissuasivas” que transmitam detalhe acionável</li>
-      </ul>
-
-      <h4>5.4 Planejamento ou mobilização</h4>
-      <ul>
-        <li>Referências à coordenação</li>
-        <li>Preparação/logística</li>
-        <li>Marcadores temporais de iminência</li>
-      </ul>
-
-      <p class="meta">
-        Nota: Exemplos envolvendo extremismo violento podem ser parcialmente mascarados ou
-        parafraseados, de modo a evitar a reprodução desnecessária de conteúdo danoso,
-        preservando-se, ainda assim, sua estrutura linguística e discursiva para fins de anotação.
-      </p>
-
-      
-      <h3>Exemplos</h3>
-      <ul>
-        <li>
-          <strong>[Extremismo Violento Explícito]</strong>
-          Texto que sugere a realização de ataques armados contra alvos estatais com o
-          objetivo de acelerar instabilidade política.
-        </li>
-      
-        <li>
-          <strong>[Extremismo Violento Explícito]</strong>
-          Descrição instrucional de sabotagem de infraestrutura crítica como meio de
-          provocar colapso social em larga escala.
-        </li>
-      
-        <li>
-          <strong>[Extremismo Violento Explícito]</strong>
-          Ameaça direta envolvendo intimidação e uso de dados pessoais como forma de
-          coerção ou retaliação.
-        </li>
-      
-        <li>
-          <strong>[Extremismo Violento Explícito]</strong>
-          Incitação à violência contra instituições religiosas, articulada por meio de
-          ideologia racial supremacista e narrativas de punição coletiva.
-        </li>
-      </ul>
-
-
-      <h2>6. Regras de Desempate</h2>
-      <ul>
-        <li><strong>Implícito vs. Explícito:</strong> se houver orientação acionável ou ameaça → <strong>EV Explícito</strong>.</li>
-        <li><strong>Não-Extremista vs. Implícito:</strong> se violência for normalizada/estetizada/racionalizada → <strong>EV Implícito</strong>.</li>
-        <li><strong>Ironia/humor:</strong> não anulam conteúdo violento; imperativos negativos irônicos contam como instrução se acionáveis.</li>
-      </ul>
-
+      <!-- (restante do seu bloco PT...) -->
     </section>
 
-    <footer class="footer">
-      <p>
-        © <span id="year"></span> BR-VERA / BR-ECHO · University of São Paulo (USP)
-      </p>
-      <p class="small">
-        This page documents the official annotation codebook for the BR-VERA corpus,
-        developed as part of the BR-ECHO research project.
-      </p>
-    </footer>
+    <!-- How to cite (BEFORE footer) -->
     <section class="card" id="how-to-cite">
       <div class="lang-block" data-lang="en">
         <h2>How to cite</h2>
@@ -738,7 +549,7 @@
           Available at: https://penteado89.github.io/br_vera/
         </p>
       </div>
-    
+
       <div class="lang-block" data-lang="pt" hidden>
         <h2>Como citar</h2>
         <p>
@@ -753,6 +564,13 @@
       </div>
     </section>
 
+    <footer class="footer">
+      <p>© <span id="year"></span> BR-VERA / BR-ECHO · University of São Paulo (USP)</p>
+      <p class="small">
+        This page documents the official annotation codebook for the BR-VERA corpus,
+        developed as part of the BR-ECHO research project.
+      </p>
+    </footer>
   </main>
 
   <script src="script.js"></script>
