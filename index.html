@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BR-VERA Annotation Codebook | BR-ECHO</title>
+  <meta name="description" content="Annotation Codebook for Brazilian Violent Extremism Risk Analysis Corpus (BR-VERA) (three-class schema), part of the BR-ECHO project." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="brand">
+      <div class="logos" aria-label="Institution and project logos">
+        <img src="assets/usp-logo.svg" alt="USP logo" class="logo" />
+        <img src="assets/br-echo-logo.svg" alt="BR-ECHO logo" class="logo" />
+      </div>
+
+      <div class="titleblock">
+        <h1>BR-VERA Annotation Codebook</h1>
+        <p class="subtitle">
+          Violent Extremism (Three-Class Schema) with Brazilian Portuguese linguistic grounding
+        </p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="lang">
+        <button id="btn-en" class="btn" type="button" aria-pressed="true">EN</button>
+        <button id="btn-pt" class="btn" type="button" aria-pressed="false">PT-BR</button>
+      </div>
+      <a class="btn outline" href="#toc">Contents</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Presentation / Apresentação -->
+    <section class="card" id="about">
+      <div class="lang-block" data-lang="en">
+        <h2>About</h2>
+        <p>
+          This page provides the annotation codebook for <strong>BR-VERA</strong>, a three-class schema for labeling
+          <strong>violent extremism</strong> in Brazilian Portuguese text. The BR-VERA corpus annotation effort is part
+          of the broader <strong>BR-ECHO</strong> project, which focuses on building auditable, evidence-grounded
+          resources for risk analysis and research in computational linguistics and NLP.
+        </p>
+        <p class="meta">
+          Version: <span id="version">1.0</span> · Last updated: <span id="updated">YYYY-MM-DD</span>
+        </p>
+      </div>
+
+      <div class="lang-block" data-lang="pt" hidden>
+        <h2>Apresentação</h2>
+        <p>
+          Esta página disponibiliza o codebook de anotação do <strong>BR-VERA</strong>, um esquema de três classes para
+          rotulação de <strong>extremismo violento</strong> em textos do português brasileiro. O esforço de anotação do
+          corpus BR-VERA integra o projeto <strong>BR-ECHO</strong>, voltado à construção de recursos auditáveis e
+          orientados por evidências para análise de risco e pesquisa em Linguística Computacional e PLN.
+        </p>
+        <p class="meta">
+          Versão: <span id="version-pt">1.0</span> · Última atualização: <span id="updated-pt">AAAA-MM-DD</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Table of contents -->
+    <nav class="card" id="toc" aria-label="Table of contents">
+      <div class="lang-block" data-lang="en">
+        <h2>Contents</h2>
+        <ol class="toc">
+          <li><a href="#purpose">Purpose</a></li>
+          <li><a href="#principles">General Annotation Principles</a></li>
+          <li><a href="#class0">Class 0 — Non-Extremist</a></li>
+          <li><a href="#class1">Class 1 — Implicit Violent Extremism</a></li>
+          <li><a href="#class2">Class 2 — Explicit Violent Extremism</a></li>
+          <li><a href="#tiebreak">Tie-Breaking Rules</a></li>
+          <li><a href="#metadata">Metadata (Auxiliary)</a></li>
+        </ol>
+      </div>
+
+      <div class="lang-block" data-lang="pt" hidden>
+        <h2>Sumário</h2>
+        <ol class="toc">
+          <li><a href="#purpose">Finalidade</a></li>
+          <li><a href="#principles">Princípios Gerais de Anotação</a></li>
+          <li><a href="#class0">Classe 0 — Não-Extremista</a></li>
+          <li><a href="#class1">Classe 1 — Extremismo Violento Implícito</a></li>
+          <li><a href="#class2">Classe 2 — Extremismo Violento Explícito</a></li>
+          <li><a href="#tiebreak">Regras de Desempate</a></li>
+          <li><a href="#metadata">Metadados (Auxiliares)</a></li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- ENGLISH CODEBOOK -->
+    <section class="card lang-block" data-lang="en" id="codebook-en">
+      <h2 id="purpose">1. Purpose of the Codebook</h2>
+      <p>
+        This codebook defines linguistic and discursive criteria for annotating texts into three
+        <strong>mutually exclusive</strong> classes:
+      </p>
+      <ul>
+        <li><strong>Class 0 — Non-Extremist</strong></li>
+        <li><strong>Class 1 — Implicit Violent Extremism</strong></li>
+        <li><strong>Class 2 — Explicit Violent Extremism</strong></li>
+      </ul>
+      <p>
+        The primary goal is to capture <strong>linguistic risk of violent mobilization</strong>, rather than
+        offensiveness, psychological traits, ideological affiliation, or legal classification.
+      </p>
+
+      <h2 id="principles">2. General Annotation Principles</h2>
+      <ol>
+        <li><strong>Discourse-level interpretation:</strong> annotate based on discursive framing and communicative intent, not isolated keywords.</li>
+        <li><strong>Toxicity is not a criterion:</strong> non-offensive texts may still express extremist risk.</li>
+        <li><strong>Explicit ideology not required:</strong> VE may be non-ideological or post-ideological.</li>
+        <li><strong>Borderline preference rule:</strong> if unsure between Non-Extremist and Implicit VE, select <strong>Implicit VE</strong>.</li>
+        <li><strong>Zero-tolerance for actionability:</strong> any threat, operational suggestion, or instructional content is <strong>Explicit VE</strong>, regardless of tone (irony, humor, meme language).</li>
+      </ol>
+
+      <h2 id="class0">3. Class 0 — Non-Extremist</h2>
+      <h3>Definition</h3>
+      <p>
+        Text that does not normalize, encourage, rationalize, or aestheticize violence, even when expressing nihilism,
+        pessimism, or severe social criticism.
+      </p>
+      <h3>Inclusion Criteria</h3>
+      <ul>
+        <li>Philosophical or existential nihilism without violence</li>
+        <li>Personal distress or emotional expression</li>
+        <li>Harsh political criticism without legitimization of violence</li>
+        <li>Academic, journalistic, or descriptive discussion of violence or extremism</li>
+        <li>Critical or condemnatory references to violent actors or events</li>
+      </ul>
+      <h3>Exclusion Criteria</h3>
+      <ul>
+        <li>Any framing that presents violence as desirable, inevitable, or morally justified</li>
+        <li>Misanthropy combined with narratives of violent collapse</li>
+      </ul>
+      <h3>Examples</h3>
+      <ul>
+        <li>“Nothing makes sense anymore; society is broken.”</li>
+        <li>“Nihilism rejects traditional moral values.”</li>
+        <li>“This type of violence only causes more suffering.”</li>
+      </ul>
+
+      <h2 id="class1">4. Class 1 — Implicit Violent Extremism</h2>
+      <h3>Definition</h3>
+      <p>
+        Text that indirectly normalizes, aestheticizes, or rationalizes violence, without explicit threats or instructions,
+        often through misanthropy, fatalism, collapse narratives, or subcultural signaling.
+      </p>
+
+      <h3>Core Indicators (Non-Exhaustive)</h3>
+      <h4>4.1 Nihilistic Rationale</h4>
+      <ul>
+        <li>Violence framed as inevitable, natural, corrective, or part of societal entropy</li>
+        <li>Humanity depicted as a disease, plague, mistake, or something to be erased</li>
+      </ul>
+
+      <h4>4.2 Aestheticization of Violence</h4>
+      <ul>
+        <li>Indirect glorification of destruction, chaos, or collapse</li>
+        <li>Artistic, ironic, or emotionally detached language about death or suffering</li>
+      </ul>
+
+      <h4>4.3 Subcultural Signaling</h4>
+      <ul>
+        <li>Neutral or positive references to past attackers</li>
+        <li>References to symbols, memes, music, or scenes associated with violent subcultures</li>
+        <li>Dog whistles intelligible primarily to in-group audiences</li>
+      </ul>
+
+      <h4>4.4 Absence of Explicit Targets</h4>
+      <ul>
+        <li>No direct threats</li>
+        <li>No instructions or operational guidance</li>
+        <li>Diffuse targets (e.g., “humanity,” “society,” “the system”)</li>
+      </ul>
+
+      <h3>Exclusion Criteria</h3>
+      <ul>
+        <li>Any explicit call for violence</li>
+        <li>Any instructional or tactical content</li>
+      </ul>
+
+      <h3>Examples</h3>
+      <ul>
+        <li>“Humanity is a disease, and collapse is only a matter of time.”</li>
+        <li>“When everything falls apart, something pure might remain.”</li>
+        <li>“Some understood it earlier than others.” (with extremist cultural references)</li>
+      </ul>
+
+      <h2 id="class2">5. Class 2 — Explicit Violent Extremism</h2>
+      <h3>Definition</h3>
+      <p>
+        Text that threatens, incites, instructs, or operationalizes violence, regardless of ideological framing or tone.
+      </p>
+
+      <h3>Core Indicators</h3>
+      <h4>5.1 Direct or Clearly Implied Threats</h4>
+      <ul>
+        <li>“You will pay.”</li>
+        <li>“They will die.”</li>
+        <li>“This is just the beginning.”</li>
+      </ul>
+
+      <h4>5.2 Calls to Action</h4>
+      <ul>
+        <li>Encouragement to attack, kill, harm, sabotage (including conditional/hypothetical forms)</li>
+      </ul>
+
+      <h4>5.3 Instructional Content</h4>
+      <ul>
+        <li>Practical guidance related to weapons, attacks, sabotage, intimidation</li>
+        <li>Includes “discouraging” formulations that still convey actionable detail</li>
+      </ul>
+
+      <h4>5.4 Planning or Mobilization Signals</h4>
+      <ul>
+        <li>Coordination references</li>
+        <li>Preparation/logistics</li>
+        <li>Temporal markers indicating imminence</li>
+      </ul>
+
+      <h3>Examples</h3>
+      <ul>
+        <li>“Cutting the power would kill millions.”</li>
+        <li>“One person with a rifle could solve this.”</li>
+        <li>“This is how it’s done.”</li>
+      </ul>
+
+      <h2 id="tiebreak">6. Tie-Breaking Rules</h2>
+      <ul>
+        <li><strong>Implicit vs. Explicit:</strong> if any actionable guidance or threat is present → <strong>Explicit VE</strong>.</li>
+        <li><strong>Non-Extremist vs. Implicit:</strong> if violence is normalized, aestheticized, or morally rationalized → <strong>Implicit VE</strong>.</li>
+        <li><strong>Irony/humor:</strong> do not negate violent content; ironic “negative imperatives” still count as instruction if actionable.</li>
+      </ul>
+
+      <h2 id="metadata">7. Metadata (Auxiliary, Not Primary Labels)</h2>
+      <ul>
+        <li><code>original_label</code></li>
+        <li><code>original_category</code> (e.g., threat, instructional)</li>
+        <li><code>reference</code> (campaign or subculture)</li>
+        <li><code>linked_KB</code> (if applicable)</li>
+      </ul>
+      <p>
+        Metadata must be preserved when available and must not override the primary class assignment.
+      </p>
+    </section>
+
+    <!-- PORTUGUÊS -->
+    <section class="card lang-block" data-lang="pt" id="codebook-pt" hidden>
+      <h2>1. Finalidade do Codebook</h2>
+      <p>
+        Este codebook define critérios linguísticos e discursivos para anotação de textos em três classes
+        <strong>mutuamente exclusivas</strong>:
+      </p>
+      <ul>
+        <li><strong>Classe 0 — Não-Extremista</strong></li>
+        <li><strong>Classe 1 — Extremismo Violento Implícito</strong></li>
+        <li><strong>Classe 2 — Extremismo Violento Explícito</strong></li>
+      </ul>
+      <p>
+        O objetivo principal é capturar <strong>risco linguístico de mobilização violenta</strong>, e não ofensividade,
+        traços psicológicos, filiação ideológica ou classificação jurídica.
+      </p>
+
+      <h2>2. Princípios Gerais de Anotação</h2>
+      <ol>
+        <li><strong>Interpretação discursiva:</strong> anotar com base em enquadramento discursivo e intenção comunicativa, e não em palavras isoladas.</li>
+        <li><strong>Toxicidade não é critério:</strong> textos não ofensivos podem expressar risco extremista.</li>
+        <li><strong>Ideologia explícita não é requisito:</strong> EV pode ocorrer sem ideologia, incluindo enquadramentos niilistas ou pós-ideológicos.</li>
+        <li><strong>Regra de preferência:</strong> em dúvida entre Não-Extremista e EV Implícito, selecionar <strong>EV Implícito</strong>.</li>
+        <li><strong>Tolerância zero à ação:</strong> ameaça, sugestão operacional ou conteúdo instrucional implica <strong>EV Explícito</strong>, independentemente do tom (ironia, humor, linguagem memética).</li>
+      </ol>
+
+      <h2>3. Classe 0 — Não-Extremista</h2>
+      <h3>Definição</h3>
+      <p>
+        Texto que não normaliza, incentiva, racionaliza ou estetiza violência, ainda que expresse niilismo, pessimismo ou
+        crítica social.
+      </p>
+      <h3>Critérios de Inclusão</h3>
+      <ul>
+        <li>Niilismo filosófico/existencial sem violência</li>
+        <li>Desabafo pessoal ou expressão emocional</li>
+        <li>Crítica política sem legitimação da violência</li>
+        <li>Discussão acadêmica/jornalística/descritiva sobre violência ou extremismo</li>
+        <li>Referência crítica ou condenatória a atores ou eventos violentos</li>
+      </ul>
+      <h3>Critérios de Exclusão</h3>
+      <ul>
+        <li>Enquadramento de violência como desejável, inevitável ou moralmente justificável</li>
+        <li>Misanthropia associada a narrativas de colapso violento</li>
+      </ul>
+      <h3>Exemplos</h3>
+      <ul>
+        <li>“Nada mais faz sentido; a sociedade está quebrada.”</li>
+        <li>“O niilismo rejeita valores morais tradicionais.”</li>
+        <li>“Esse tipo de violência só gera mais sofrimento.”</li>
+      </ul>
+
+      <h2>4. Classe 1 — Extremismo Violento Implícito</h2>
+      <h3>Definição</h3>
+      <p>
+        Texto que normaliza, estetiza ou racionaliza violência de forma indireta, sem ameaças ou instruções explícitas,
+        com misanthropia, fatalismo, narrativas de colapso ou sinalização subcultural.
+      </p>
+
+      <h3>Indicadores Centrais (Lista não exaustiva)</h3>
+      <h4>4.1 Racionalidade niilista</h4>
+      <ul>
+        <li>Violência enquadrada como inevitável, natural, corretiva ou parte da entropia social</li>
+        <li>Humanidade descrita como doença, praga, erro ou algo a ser apagado</li>
+      </ul>
+
+      <h4>4.2 Estetização da violência</h4>
+      <ul>
+        <li>Glorificação indireta de destruição, caos ou colapso</li>
+        <li>Linguagem artística, irônica ou distanciada sobre morte ou sofrimento</li>
+      </ul>
+
+      <h4>4.3 Sinalização subcultural</h4>
+      <ul>
+        <li>Referências neutras/positivas a atacantes anteriores</li>
+        <li>Símbolos, memes, música ou cenas associadas a subculturas violentas</li>
+        <li>Dog whistles inteligíveis para audiências internas</li>
+      </ul>
+
+      <h4>4.4 Ausência de alvo explícito</h4>
+      <ul>
+        <li>Sem ameaça direta</li>
+        <li>Sem conteúdo instrucional ou operacional</li>
+        <li>Alvos difusos (ex.: “humanidade”, “sociedade”, “sistema”)</li>
+      </ul>
+
+      <h3>Critérios de Exclusão</h3>
+      <ul>
+        <li>Chamada explícita à violência</li>
+        <li>Conteúdo tático/instrucional</li>
+      </ul>
+
+      <h3>Exemplos</h3>
+      <ul>
+        <li>“A humanidade é uma doença, e o colapso é só questão de tempo.”</li>
+        <li>“Quando tudo cair, algo puro pode permanecer.”</li>
+        <li>“Alguns entenderam antes dos outros.” (com referência cultural extremista)</li>
+      </ul>
+
+      <h2>5. Classe 2 — Extremismo Violento Explícito</h2>
+      <h3>Definição</h3>
+      <p>
+        Texto que ameaça, incita, instrui ou operacionaliza violência, independentemente de enquadramento ideológico ou tom.
+      </p>
+
+      <h3>Indicadores Centrais</h3>
+      <h4>5.1 Ameaças diretas ou claramente implícitas</h4>
+      <ul>
+        <li>“Vocês vão pagar.”</li>
+        <li>“Eles vão morrer.”</li>
+        <li>“Isso é só o começo.”</li>
+      </ul>
+
+      <h4>5.2 Chamada à ação</h4>
+      <ul>
+        <li>Incentivo a atacar, matar, ferir, sabotar (inclui formas condicionais/hipotéticas)</li>
+      </ul>
+
+      <h4>5.3 Conteúdo instrucional</h4>
+      <ul>
+        <li>Orientação prática sobre armas, ataques, sabotagem, intimidação</li>
+        <li>Inclui formulações “dissuasivas” que transmitam detalhe acionável</li>
+      </ul>
+
+      <h4>5.4 Planejamento ou mobilização</h4>
+      <ul>
+        <li>Referências à coordenação</li>
+        <li>Preparação/logística</li>
+        <li>Marcadores temporais de iminência</li>
+      </ul>
+
+      <h3>Exemplos</h3>
+      <ul>
+        <li>“Cortar a energia mataria milhões.”</li>
+        <li>“Uma pessoa com um rifle resolveria isso.”</li>
+        <li>“É assim que se faz.”</li>
+      </ul>
+
+      <h2>6. Regras de Desempate</h2>
+      <ul>
+        <li><strong>Implícito vs. Explícito:</strong> se houver orientação acionável ou ameaça → <strong>EV Explícito</strong>.</li>
+        <li><strong>Não-Extremista vs. Implícito:</strong> se violência for normalizada/estetizada/racionalizada → <strong>EV Implícito</strong>.</li>
+        <li><strong>Ironia/humor:</strong> não anulam conteúdo violento; imperativos negativos irônicos contam como instrução se acionáveis.</li>
+      </ul>
+
+      <h2>7. Metadados (Auxiliares, não classificatórios)</h2>
+      <ul>
+        <li><code>original_label</code></li>
+        <li><code>original_category</code> (ex.: ameaça, instrucional)</li>
+        <li><code>reference</code> (campanha ou subcultura)</li>
+        <li><code>linked_KB</code> (se aplicável)</li>
+      </ul>
+      <p>
+        Metadados devem ser preservados quando disponíveis e não substituem a atribuição da classe principal.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <p>
+        © <span id="year"></span> BR-VERA / BR-ECHO · Maintained for research and annotation standardization.
+      </p>
+      <p class="small">
+        Suggested citation: BR-VERA Annotation Codebook (Three-Class VE Schema), BR-ECHO project.
+      </p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
