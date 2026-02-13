@@ -152,6 +152,237 @@
         <li><strong>Borderline preference rule:</strong> if unsure between Non-Extremist and Implicit VE, select <strong>Implicit VE</strong>.</li>
         <li><strong>Zero-tolerance for actionability:</strong> any threat, operational suggestion, or instructional content is <strong>Explicit VE</strong>, regardless of tone (irony, humor, meme language).</li>
       </ol>
+    <section class="card" id="annotation-variables">
+      <div class="lang-block" data-lang="en">
+        <h2>Annotation Variables (Human Layer)</h2>
+        <p>
+          The human annotation layer records a small set of core decision variables to support
+          auditability, adjudication, and structured comparison with model-based annotations.
+          Unless otherwise stated, annotators must base their decisions on the evidence spans selected.
+        </p>
+    
+        <table class="meta" style="width:100%; border-collapse:collapse;">
+          <thead>
+            <tr>
+              <th style="text-align:left; padding:8px; border-bottom:1px solid var(--border);">Variable</th>
+              <th style="text-align:left; padding:8px; border-bottom:1px solid var(--border);">Column name</th>
+              <th style="text-align:left; padding:8px; border-bottom:1px solid var(--border);">Allowed values (EN → PT-BR)</th>
+              <th style="text-align:left; padding:8px; border-bottom:1px solid var(--border);">Decision</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">Primary label</td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_label_0_1_2</code></td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">
+                0 (non-extremist → não-extremista); 1 (implicit VE → EV implícito); 2 (explicit VE → EV explícito)
+              </td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Single-choice</strong></td>
+            </tr>
+    
+            <tr>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">Evidence spans</td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_evidence_spans</code></td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">
+                One or more short extractive spans copied from the text (trechos literais curtos; um ou mais)
+              </td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Multi-span</strong></td>
+            </tr>
+    
+            <tr>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">Speech act type</td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_speech_act_type</code></td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">
+                threat (ameaça); incitement (incitação); instruction (instrução); ideological_framing (enquadramento ideológico);
+                glorification (glorificação da violência); none (nenhum)
+              </td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Single-choice</strong></td>
+            </tr>
+    
+            <tr>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">Primary target type</td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_target_type</code></td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">
+                individual (indivíduo); group (grupo); institution (instituição); infrastructure (infraestrutura);
+                abstract (abstrato: sociedade/sistema/humanidade)
+              </td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Single-choice</strong></td>
+            </tr>
+    
+            <tr>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">Annotator confidence</td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_confidence</code></td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">
+                low (baixa); medium (média); high (alta)
+              </td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Single-choice</strong></td>
+            </tr>
+    
+            <tr>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">Annotator notes</td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_notes</code></td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">
+                Free-text (texto livre)
+              </td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Free-text</strong></td>
+            </tr>
+          </tbody>
+        </table>
+    
+        <p class="meta">
+          Decision scope: Speech act type and target type are recorded as dominant (single-choice) variables to reduce
+          annotator fatigue and improve adjudication. Multi-label decompositions are handled in the model-based layer.
+        </p>
+      </div>
+    
+      <div class="lang-block" data-lang="pt" hidden>
+        <h2>Variáveis de anotação (camada humana)</h2>
+        <p>
+          A camada de anotação humana registra um conjunto reduzido de variáveis decisórias centrais, com o objetivo de
+          sustentar auditabilidade, adjudicação e comparação estruturada com anotações baseadas em modelos. Salvo indicação
+          em contrário, as decisões devem ser fundamentadas nos trechos de evidência selecionados.
+        </p>
+    
+        <table class="meta" style="width:100%; border-collapse:collapse;">
+          <thead>
+            <tr>
+              <th style="text-align:left; padding:8px; border-bottom:1px solid var(--border);">Variável</th>
+              <th style="text-align:left; padding:8px; border-bottom:1px solid var(--border);">Nome da coluna</th>
+              <th style="text-align:left; padding:8px; border-bottom:1px solid var(--border);">Respostas possíveis (EN → PT-BR)</th>
+              <th style="text-align:left; padding:8px; border-bottom:1px solid var(--border);">Escolha</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">Rótulo principal</td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_label_0_1_2</code></td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">
+                0 (non-extremist → não-extremista); 1 (implicit VE → EV implícito); 2 (explicit VE → EV explícito)
+              </td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Uma</strong></td>
+            </tr>
+    
+            <tr>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">Trechos de evidência</td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_evidence_spans</code></td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">
+                Um ou mais trechos literais curtos copiados do texto (one or more short extractive spans)
+              </td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Uma ou mais</strong></td>
+            </tr>
+    
+            <tr>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">Tipo de ato de fala</td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_speech_act_type</code></td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">
+                threat (ameaça); incitement (incitação); instruction (instrução); ideological_framing (enquadramento ideológico);
+                glorification (glorificação da violência); none (nenhum)
+              </td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Uma</strong></td>
+            </tr>
+    
+            <tr>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">Alvo principal</td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_target_type</code></td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">
+                individual (indivíduo); group (grupo); institution (instituição); infrastructure (infraestrutura);
+                abstract (abstrato: sociedade/sistema/humanidade)
+              </td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Uma</strong></td>
+            </tr>
+    
+            <tr>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">Confiança do anotador</td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_confidence</code></td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">
+                low (baixa); medium (média); high (alta)
+              </td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Uma</strong></td>
+            </tr>
+    
+            <tr>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">Observações</td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_notes</code></td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">
+                Texto livre (free-text)
+              </td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Livre</strong></td>
+            </tr>
+          </tbody>
+        </table>
+    
+        <p class="meta">
+          Escopo decisório: Tipo de ato de fala e alvo principal são registrados como variáveis dominantes (escolha única)
+          para reduzir fadiga e facilitar adjudicação. Decomposições multi-rótulo ficam na camada baseada em modelos.
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="decision-rules">
+      <div class="lang-block" data-lang="en">
+        <h2>Operational Decision Rules</h2>
+    
+        <h3>Evidence spans</h3>
+        <ul>
+          <li>Select <strong>one or more</strong> short, literal spans that directly justify the primary label.</li>
+          <li>Evidence must be <strong>extractive</strong> (copied from the text) rather than paraphrased.</li>
+          <li>If multiple spans are selected, each span must contribute distinct justification (avoid duplicates).</li>
+        </ul>
+    
+        <h3>Speech act type (single-choice)</h3>
+        <ul>
+          <li>Select the <strong>dominant</strong> speech act that most directly supports the assigned label.</li>
+          <li>If threat or instruction is present in the evidence, do not select <code>none</code>.</li>
+          <li>If multiple speech acts occur, prioritize the one that makes the content actionable (threat/instruction &gt; incitement &gt; glorification &gt; ideological_framing).</li>
+        </ul>
+    
+        <h3>Target type (single-choice)</h3>
+        <ul>
+          <li>Select the target type that is <strong>most directly implicated</strong> in the evidence span(s).</li>
+          <li>Do not identify specific protected groups as a required step; target type must remain high-level.</li>
+          <li>If targets are diffuse (e.g., “society”, “humanity”, “the system”), select <code>abstract</code>.</li>
+        </ul>
+    
+        <h3>Confidence</h3>
+        <ul>
+          <li>Use <code>high</code> when label and evidence are straightforward under the codebook.</li>
+          <li>Use <code>medium</code> when interpretation depends on framing or pragmatic inference.</li>
+          <li>Use <code>low</code> when the decision is borderline or evidence is weak/indirect.</li>
+        </ul>
+      </div>
+    
+      <div class="lang-block" data-lang="pt" hidden>
+        <h2>Regras operacionais de decisão</h2>
+    
+        <h3>Trechos de evidência</h3>
+        <ul>
+          <li>Selecione <strong>um ou mais</strong> trechos literais curtos que justifiquem diretamente o rótulo principal.</li>
+          <li>A evidência deve ser <strong>extrativa</strong> (copiada do texto), e não parafraseada.</li>
+          <li>Se houver múltiplos trechos, cada um deve contribuir com justificativa distinta (evitar duplicação).</li>
+        </ul>
+    
+        <h3>Tipo de ato de fala (escolha única)</h3>
+        <ul>
+          <li>Selecione o ato de fala <strong>predominante</strong> que sustenta de modo mais direto o rótulo atribuído.</li>
+          <li>Se houver ameaça ou instrução no(s) trecho(s) de evidência, não selecionar <code>none</code>.</li>
+          <li>Quando houver sobreposição, priorize o que torna o conteúdo acionável (threat/instruction &gt; incitement &gt; glorification &gt; ideological_framing).</li>
+        </ul>
+    
+        <h3>Alvo principal (escolha única)</h3>
+        <ul>
+          <li>Selecione o tipo de alvo <strong>mais diretamente implicado</strong> no(s) trecho(s) de evidência.</li>
+          <li>Não é necessário identificar grupos protegidos específicos; o alvo deve permanecer em nível alto de abstração.</li>
+          <li>Quando o alvo for difuso (ex.: “sociedade”, “humanidade”, “sistema”), selecione <code>abstract</code>.</li>
+        </ul>
+    
+        <h3>Confiança</h3>
+        <ul>
+          <li>Use <code>high</code> quando rótulo e evidência forem diretos à luz do codebook.</li>
+          <li>Use <code>medium</code> quando a decisão depender de enquadramento ou inferência pragmática.</li>
+          <li>Use <code>low</code> quando a decisão for limítrofe ou a evidência for fraca/indireta.</li>
+        </ul>
+      </div>
+    </section>
 
       <h2 id="class0">3. Class 0 — Non-Extremist</h2>
       <h3>Definition</h3>
