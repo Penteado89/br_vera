@@ -127,31 +127,6 @@
       </div>
     </nav>
 
-    <!-- ENGLISH CODEBOOK -->
-    <section class="card lang-block" data-lang="en" id="codebook-en">
-      <h2 id="purpose">1. Purpose of the Codebook</h2>
-      <p>
-        This codebook defines linguistic and discursive criteria for annotating texts into three
-        <strong>mutually exclusive</strong> classes:
-      </p>
-      <ul>
-        <li><strong>Class 0 — Non-Extremist</strong></li>
-        <li><strong>Class 1 — Implicit Violent Extremism</strong></li>
-        <li><strong>Class 2 — Explicit Violent Extremism</strong></li>
-      </ul>
-      <p>
-        The primary goal is to capture <strong>linguistic risk of violent mobilization</strong>, rather than
-        offensiveness, psychological traits, ideological affiliation, or legal classification.
-      </p>
-
-      <h2 id="principles">2. General Annotation Principles</h2>
-      <ol>
-        <li><strong>Discourse-level interpretation:</strong> annotate based on discursive framing and communicative intent, not isolated keywords.</li>
-        <li><strong>Toxicity is not a criterion:</strong> non-offensive texts may still express extremist risk.</li>
-        <li><strong>Explicit ideology not required:</strong> VE may be non-ideological or post-ideological.</li>
-        <li><strong>Borderline preference rule:</strong> if unsure between Non-Extremist and Implicit VE, select <strong>Implicit VE</strong>.</li>
-        <li><strong>Zero-tolerance for actionability:</strong> any threat, operational suggestion, or instructional content is <strong>Explicit VE</strong>, regardless of tone (irony, humor, meme language).</li>
-      </ol>
     <section class="card" id="annotation-variables">
       <div class="lang-block" data-lang="en">
         <h2>Annotation Variables (Human Layer)</h2>
@@ -159,6 +134,10 @@
           The human annotation layer records a small set of core decision variables to support
           auditability, adjudication, and structured comparison with model-based annotations.
           Unless otherwise stated, annotators must base their decisions on the evidence spans selected.
+        </p>
+        <p class="meta">
+          Note: Category labels are kept in English for computational compatibility. Portuguese glosses are provided
+          to support human annotators.
         </p>
     
         <table class="meta" style="width:100%; border-collapse:collapse;">
@@ -219,11 +198,9 @@
             </tr>
     
             <tr>
-              <td style="padding:8px; border-bottom:1px solid var(--border);">Annotator notes</td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">Annotator notes (optional)</td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_notes</code></td>
-              <td style="padding:8px; border-bottom:1px solid var(--border);">
-                Free-text (texto livre)
-              </td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">Free-text (texto livre)</td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Free-text</strong></td>
             </tr>
           </tbody>
@@ -241,6 +218,10 @@
           A camada de anotação humana registra um conjunto reduzido de variáveis decisórias centrais, com o objetivo de
           sustentar auditabilidade, adjudicação e comparação estruturada com anotações baseadas em modelos. Salvo indicação
           em contrário, as decisões devem ser fundamentadas nos trechos de evidência selecionados.
+        </p>
+        <p class="meta">
+          Nota: As categorias são mantidas em inglês por compatibilidade computacional. As glossas em português apoiam
+          o trabalho dos anotadores humanos.
         </p>
     
         <table class="meta" style="width:100%; border-collapse:collapse;">
@@ -301,11 +282,9 @@
             </tr>
     
             <tr>
-              <td style="padding:8px; border-bottom:1px solid var(--border);">Observações</td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">Observações (opcional)</td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_notes</code></td>
-              <td style="padding:8px; border-bottom:1px solid var(--border);">
-                Texto livre (free-text)
-              </td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);">Texto livre (free-text)</td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Livre</strong></td>
             </tr>
           </tbody>
@@ -317,7 +296,7 @@
         </p>
       </div>
     </section>
-
+    
     <section class="card" id="decision-rules">
       <div class="lang-block" data-lang="en">
         <h2>Operational Decision Rules</h2>
@@ -325,7 +304,7 @@
         <h3>Evidence spans</h3>
         <ul>
           <li>Select <strong>one or more</strong> short, literal spans that directly justify the primary label.</li>
-          <li>Evidence must be <strong>extractive</strong> (copied from the text) rather than paraphrased.</li>
+          <li>Evidence must be <strong>extractive</strong> (copied from the text), not paraphrased.</li>
           <li>If multiple spans are selected, each span must contribute distinct justification (avoid duplicates).</li>
         </ul>
     
@@ -339,7 +318,7 @@
         <h3>Target type (single-choice)</h3>
         <ul>
           <li>Select the target type that is <strong>most directly implicated</strong> in the evidence span(s).</li>
-          <li>Do not identify specific protected groups as a required step; target type must remain high-level.</li>
+          <li>Do not identify specific protected groups as a required step; target type remains high-level.</li>
           <li>If targets are diffuse (e.g., “society”, “humanity”, “the system”), select <code>abstract</code>.</li>
         </ul>
     
@@ -371,7 +350,7 @@
         <h3>Alvo principal (escolha única)</h3>
         <ul>
           <li>Selecione o tipo de alvo <strong>mais diretamente implicado</strong> no(s) trecho(s) de evidência.</li>
-          <li>Não é necessário identificar grupos protegidos específicos; o alvo deve permanecer em nível alto de abstração.</li>
+          <li>Não é necessário identificar grupos protegidos específicos; o alvo permanece em nível alto de abstração.</li>
           <li>Quando o alvo for difuso (ex.: “sociedade”, “humanidade”, “sistema”), selecione <code>abstract</code>.</li>
         </ul>
     
@@ -383,6 +362,33 @@
         </ul>
       </div>
     </section>
+
+
+    <!-- ENGLISH CODEBOOK -->
+    <section class="card lang-block" data-lang="en" id="codebook-en">
+      <h2 id="purpose">1. Purpose of the Codebook</h2>
+      <p>
+        This codebook defines linguistic and discursive criteria for annotating texts into three
+        <strong>mutually exclusive</strong> classes:
+      </p>
+      <ul>
+        <li><strong>Class 0 — Non-Extremist</strong></li>
+        <li><strong>Class 1 — Implicit Violent Extremism</strong></li>
+        <li><strong>Class 2 — Explicit Violent Extremism</strong></li>
+      </ul>
+      <p>
+        The primary goal is to capture <strong>linguistic risk of violent mobilization</strong>, rather than
+        offensiveness, psychological traits, ideological affiliation, or legal classification.
+      </p>
+
+      <h2 id="principles">2. General Annotation Principles</h2>
+      <ol>
+        <li><strong>Discourse-level interpretation:</strong> annotate based on discursive framing and communicative intent, not isolated keywords.</li>
+        <li><strong>Toxicity is not a criterion:</strong> non-offensive texts may still express extremist risk.</li>
+        <li><strong>Explicit ideology not required:</strong> VE may be non-ideological or post-ideological.</li>
+        <li><strong>Borderline preference rule:</strong> if unsure between Non-Extremist and Implicit VE, select <strong>Implicit VE</strong>.</li>
+        <li><strong>Zero-tolerance for actionability:</strong> any threat, operational suggestion, or instructional content is <strong>Explicit VE</strong>, regardless of tone (irony, humor, meme language).</li>
+      </ol>
 
       <h2 id="class0">3. Class 0 — Non-Extremist</h2>
       <h3>Definition</h3>
