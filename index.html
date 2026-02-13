@@ -151,7 +151,7 @@
           <tbody>
             <tr>
               <td style="padding:8px; border-bottom:1px solid var(--border);">Primary label</td>
-              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_label_0_1_2</code></td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>assigned_label</code></td>
               <td style="padding:8px; border-bottom:1px solid var(--border);">
                 0 (non-extremist → não-extremista); 1 (implicit VE → EV implícito); 2 (explicit VE → EV explícito)
               </td>
@@ -160,7 +160,7 @@
 
             <tr>
               <td style="padding:8px; border-bottom:1px solid var(--border);">Evidence spans</td>
-              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_evidence_spans</code></td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>evidence_span</code></td>
               <td style="padding:8px; border-bottom:1px solid var(--border);">
                 One or more short extractive spans copied from the text (trechos literais curtos; um ou mais)
               </td>
@@ -169,7 +169,7 @@
 
             <tr>
               <td style="padding:8px; border-bottom:1px solid var(--border);">Speech act type</td>
-              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_speech_act_type</code></td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>speech_act_type</code></td>
               <td style="padding:8px; border-bottom:1px solid var(--border);">
                 threat (ameaça); incitement (incitação); instruction (instrução); ideological_framing (enquadramento ideológico);
                 glorification (glorificação da violência); none (nenhum)
@@ -179,7 +179,7 @@
 
             <tr>
               <td style="padding:8px; border-bottom:1px solid var(--border);">Primary target type</td>
-              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_target_type</code></td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>target_type</code></td>
               <td style="padding:8px; border-bottom:1px solid var(--border);">
                 individual (indivíduo); group (grupo); institution (instituição); infrastructure (infraestrutura);
                 abstract (abstrato: sociedade/sistema/humanidade)
@@ -189,7 +189,7 @@
 
             <tr>
               <td style="padding:8px; border-bottom:1px solid var(--border);">Annotator confidence</td>
-              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_confidence</code></td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>confidence_level</code></td>
               <td style="padding:8px; border-bottom:1px solid var(--border);">
                 low (baixa); medium (média); high (alta)
               </td>
@@ -198,17 +198,13 @@
 
             <tr>
               <td style="padding:8px; border-bottom:1px solid var(--border);">Annotator notes (optional)</td>
-              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_notes</code></td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>annotator_comment</code></td>
               <td style="padding:8px; border-bottom:1px solid var(--border);">Free-text (texto livre)</td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Free-text</strong></td>
             </tr>
           </tbody>
         </table>
 
-        <p class="meta">
-          Decision scope: Speech act type and target type are recorded as dominant (single-choice) variables to reduce
-          annotator fatigue and improve adjudication. Multi-label decompositions are handled in the model-based layer.
-        </p>
       </div>
 
       <div class="lang-block" data-lang="pt" hidden>
@@ -235,7 +231,7 @@
           <tbody>
             <tr>
               <td style="padding:8px; border-bottom:1px solid var(--border);">Rótulo principal</td>
-              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_label_0_1_2</code></td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>assigned_label</code></td>
               <td style="padding:8px; border-bottom:1px solid var(--border);">
                 0 (non-extremist → não-extremista); 1 (implicit VE → EV implícito); 2 (explicit VE → EV explícito)
               </td>
@@ -244,7 +240,7 @@
 
             <tr>
               <td style="padding:8px; border-bottom:1px solid var(--border);">Trechos de evidência</td>
-              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_evidence_spans</code></td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>evidence_span</code></td>
               <td style="padding:8px; border-bottom:1px solid var(--border);">
                 Um ou mais trechos literais curtos copiados do texto (one or more short extractive spans)
               </td>
@@ -253,7 +249,7 @@
 
             <tr>
               <td style="padding:8px; border-bottom:1px solid var(--border);">Tipo de ato de fala</td>
-              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_speech_act_type</code></td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>speech_act_type</code></td>
               <td style="padding:8px; border-bottom:1px solid var(--border);">
                 threat (ameaça); incitement (incitação); instruction (instrução); ideological_framing (enquadramento ideológico);
                 glorification (glorificação da violência); none (nenhum)
@@ -263,7 +259,7 @@
 
             <tr>
               <td style="padding:8px; border-bottom:1px solid var(--border);">Alvo principal</td>
-              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_target_type</code></td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>target_type</code></td>
               <td style="padding:8px; border-bottom:1px solid var(--border);">
                 individual (indivíduo); group (grupo); institution (instituição); infrastructure (infraestrutura);
                 abstract (abstrato: sociedade/sistema/humanidade)
@@ -273,7 +269,7 @@
 
             <tr>
               <td style="padding:8px; border-bottom:1px solid var(--border);">Confiança do anotador</td>
-              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_confidence</code></td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>confidence_level</code></td>
               <td style="padding:8px; border-bottom:1px solid var(--border);">
                 low (baixa); medium (média); high (alta)
               </td>
@@ -282,17 +278,12 @@
 
             <tr>
               <td style="padding:8px; border-bottom:1px solid var(--border);">Observações (opcional)</td>
-              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>human_notes</code></td>
+              <td style="padding:8px; border-bottom:1px solid var(--border);"><code>annotator_comment</code></td>
               <td style="padding:8px; border-bottom:1px solid var(--border);">Texto livre (free-text)</td>
               <td style="padding:8px; border-bottom:1px solid var(--border);"><strong>Livre</strong></td>
             </tr>
           </tbody>
         </table>
-
-        <p class="meta">
-          Escopo decisório: Tipo de ato de fala e alvo principal são registrados como variáveis dominantes (escolha única)
-          para reduzir fadiga e facilitar adjudicação. Decomposições multi-rótulo ficam na camada baseada em modelos.
-        </p>
       </div>
     </section>
 
